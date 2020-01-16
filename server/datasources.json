@@ -5,8 +5,8 @@
   },
   "cinemaDs": {
     "url": "mongodb+srv://root:root@cluster0-lp00m.mongodb.net/cinema?retryWrites=true&w=majority",
-    "name": "cinemaDs",
     "database": "cinema",
+    "name": "cinemaDs",
     "useNewUrlParser": true,
     "connector": "mongodb"
   }

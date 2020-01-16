@@ -38,5 +38,13 @@
   "movie": {
     "dataSource": "cinemaDs",
     "public": true
+  },
+  "ticket": {
+    "dataSource": "cinemaDs",
+    "public": true
+  },
+  "show": {
+    "dataSource": "cinemaDs",
+    "public": true
   }
 }

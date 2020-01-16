@@ -6,15 +6,12 @@
     "validateUpsert": true
   },
   "properties": {
-    "imdbId": {
-      "type": "string"
-    },
-    "imdbRating": {
-      "type": "number"
-    },
     "title": {
       "type": "string",
       "required": true
+    },
+    "backdrop": {
+      "type": "string"
     },
     "poster": {
       "type": "string"
@@ -33,21 +30,26 @@
         "string"
       ]
     },
-    "release_date": {
-      "type": "string"
-    },
-    "end_date": {
-      "type": "string"
-    },
     "runtime": {
       "type": "number"
-    },
-    "mpaa": {
-      "type": "string"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "movieId": {
+      "type": "hasMany",
+      "model": "show",
+      "foreignKey": ""
+    },
+    "shows": {
+      "type": "hasMany",
+      "model": "show",
+      "foreignKey": "movieId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }

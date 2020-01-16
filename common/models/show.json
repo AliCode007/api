@@ -1,0 +1,26 @@
+{
+  "name": "show",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "time": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "tickets": {
+      "type": "hasMany",
+      "model": "ticket",
+      "foreignKey": "showId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

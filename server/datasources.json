@@ -1,0 +1,13 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "cinemaDs": {
+    "url": "mongodb+srv://root:root@cluster0-lp00m.mongodb.net/cinema?retryWrites=true&w=majority",
+    "name": "cinemaDs",
+    "database": "cinema",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
+  }
+}

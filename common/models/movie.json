@@ -1,0 +1,53 @@
+{
+  "name": "movie",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "imdbId": {
+      "type": "string"
+    },
+    "imdbRating": {
+      "type": "number"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "poster": {
+      "type": "string"
+    },
+    "trailer": {
+      "type": "string"
+    },
+    "overview": {
+      "type": "string"
+    },
+    "director": {
+      "type": "string"
+    },
+    "cast": {
+      "type": [
+        "string"
+      ]
+    },
+    "release_date": {
+      "type": "string"
+    },
+    "end_date": {
+      "type": "string"
+    },
+    "runtime": {
+      "type": "number"
+    },
+    "mpaa": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

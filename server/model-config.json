@@ -14,10 +14,10 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "cinemaDs"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "cinemaDs",
     "public": false
   },
   "ACL": {
@@ -32,7 +32,7 @@
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "cinemaDs",
     "public": false
   },
   "movie": {

@@ -14,26 +14,25 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "cinemaDs"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "cinemaDs",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
-    "public": false
+    "dataSource": "cinemaDs"
   },
   "RoleMapping": {
-    "dataSource": "db",
-    "public": false,
+    "dataSource": "cinemaDs",
+    "public": true,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
-    "public": false
+    "dataSource": "cinemaDs",
+    "public": true
   },
   "movie": {
     "dataSource": "cinemaDs",

@@ -21,8 +21,7 @@
     "public": false
   },
   "ACL": {
-    "dataSource": "cinemaDs",
-    "public": false
+    "dataSource": "cinemaDs"
   },
   "RoleMapping": {
     "dataSource": "cinemaDs",

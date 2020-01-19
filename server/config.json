@@ -18,5 +18,14 @@
       "limit": "100kb"
     },
     "cors": false
+  },
+  "mailer": {
+      "service" : "gmail",
+      "auth" : {
+        "user" : "funflix.ticket.service@gmail.com",
+        "pass" : "funflix123"
+      }
   }
-}
+  
+  }
+

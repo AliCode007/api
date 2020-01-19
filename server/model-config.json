@@ -21,19 +21,19 @@
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "cinemaDs",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
-    "public": false,
+    "dataSource": "cinemaDs",
+    "public": true,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
     "dataSource": "cinemaDs",
-    "public": false
+    "public": true
   },
   "movie": {
     "dataSource": "cinemaDs",

@@ -18,20 +18,31 @@ module.exports = function(Ticket) {
             returns : {arg : 'sent' , type :'boolean'}
         });
     Ticket.mail = async function (userId,ticketId) {
-        const User = app.models.User;
-        let res = await User.findById(userId);
-        console.log(res)
-        let email = res.email;
-        console.log(email)
 
-        let url = await QRcode.toFile("./ticket.jpg",ticketId );
+        const User = app.models.User;
+        const Ticket = app.models.Ticket;
+        const Show = app.models.Show;
+        const Movie = app.models.Movie;
+
+        let user = await User.findById(userId);
+        console.log(user)
+        let email = user.email;
+        console.log(email)
+        let ticket = await Ticket.findById(ticketId)
+        console.log(ticket)
+        let show = await Show.findById(ticket.showId);
+        console.log(show)
+        let movie = await Movie.findById(show.movieId);
+        console.log(movie)
+
+        let url = await QRcode.toFile("./ticket.jpg",`${ticketId}/${user.id}` );
         let transporter = nodemailer.createTransport(Config.mailer);
 
         let mailOptions = {
             from : Config.mailer.auth.user ,
             to : email,
             subject : 'test',
-            html : `<h1>Here is your Ticket</h1> `,
+            html : `<h1>Here is your Ticket ${user.username} for the movie ${movie.title}</h1> `,
             attachments : [
                 {
                     filename : 'ticket.jpg',
@@ -46,6 +57,7 @@ module.exports = function(Ticket) {
                 return {sent : false}
             }else{
                 console.log('Email sent')
+                fs.unlinkSync('./ticket.jpg')
                 return {sent : true}
             }
         })
